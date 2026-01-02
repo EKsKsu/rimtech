@@ -5,8 +5,10 @@ const app = express();
 app.use(express.json());
 
 // ================= CONFIG =================
-const BOT_TOKEN = "MTQ1NjY3NTM1NTM2NzgzMzYwMA.GBOTqS.3QaGXwsKa0qeetSmw13IGrMVnngzQ3IuB1bMQk";
-const PORT = 3000;
+require("dotenv").config();
+
+const BOT_TOKEN = process.env.BOT_TOKEN;
+const PORT = process.env.PORT || 3000;
 // ==========================================
 
 const client = new Client({
